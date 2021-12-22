@@ -28,7 +28,7 @@ export default function Login() {
       callbackUrl: 'http://localhost:3000/dashboard',
     }).then((login_res) => {
       //console.log("user Login Information",resulte);
-      console.log('--- error ', login_res);
+      console.log('--- error Recored ', login_res);
     });
 
     return false;
