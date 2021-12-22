@@ -115,7 +115,7 @@ const Header: React.FC<HeaderProps> = (props) => {
             {
               content: (
                 <Link href="/">
-                  <a className="logo">Admin Template</a>
+                  <a className="logo">Dashboard</a>
                 </Link>
               ),
             },
@@ -132,7 +132,6 @@ const Header: React.FC<HeaderProps> = (props) => {
                 />
               ),
             },
-            
           ]}
         />
         <Actions
@@ -140,11 +139,9 @@ const Header: React.FC<HeaderProps> = (props) => {
           className="right"
           actions={[
             {
-              content: (
-                  <span className="github">V 1.0.0</span>
-              ),
+              content: <span className="github">V 1.0.0</span>,
             },
-            
+
             {
               content: (
                 <ContextMenu

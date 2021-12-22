@@ -1,4 +1,5 @@
 import Button from '@mui/material/Button';
+//import { Button } from '@paljs/ui/Button';
 import { InputGroup } from '@paljs/ui/Input';
 import { Checkbox } from '@paljs/ui/Checkbox';
 import React from 'react';
@@ -30,7 +31,12 @@ export default function Login() {
               <a>Forgot Password?</a>
             </Link>
           </Group>
-          <Button variant="contained">Login</Button>
+          <Button variant="contained" fullWidth>
+            Login
+          </Button>
+          {/* <Button status="Success" type="button" shape="SemiRound" fullWidth>
+            Login
+          </Button> */}
         </form>
         <Socials />
         <p>
