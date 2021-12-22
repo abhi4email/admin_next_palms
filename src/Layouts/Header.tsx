@@ -11,6 +11,8 @@ import ContextMenu from '@paljs/ui/ContextMenu';
 import User from '@paljs/ui/User';
 import { breakpointDown } from '@paljs/ui/breakpoints';
 
+import { useSession, signOut } from 'next-auth/react';
+
 const HeaderStyle = styled.div`
   display: flex;
   width: 100%;

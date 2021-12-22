@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react';
 import { useRouter } from 'next/router';
+import { useSession } from 'next-auth/react';
 
 export default function Index() {
   const router = useRouter();
   useEffect(() => {
-    router.push('/extra-components/accordion');
+    router.push('/dashboard');
   }),
     [];
   return <div />;
