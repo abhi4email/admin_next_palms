@@ -6,43 +6,43 @@ export interface CustomDialogProps {
   children?: ReactNode;
   title?: string;
   customButton?: any;
-  forceAction?: boolean;
+  isOpen?: boolean;
   showCancelButton?: boolean;
+  onClose: any;
 }
 
 export const CustomDialog: React.FC<CustomDialogProps> = ({
   children,
   customButton,
   title,
-  forceAction,
+  isOpen = false,
   showCancelButton,
+  onClose,
 }) => {
-  const [open, setOpen] = React.useState(false);
-  if (forceAction) {
-    setOpen(forceAction);
-  }
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
+  const [open, setOpen] = React.useState(isOpen);
+
   const handleClose = () => {
     setOpen(false);
+    onClose();
   };
 
   const childrenWithProps = React.Children.map(children, (child) => {
     // Checking isValidElement is the safe way and avoids a typescript
     // error too.
-    if (React.isValidElement(child)) {
-      return React.cloneElement(child, { handleClose });
-    }
+    // if (React.isValidElement(child)) {
+    //   return React.cloneElement(child, { handleClose });
+    // }
     return child;
   });
 
   return (
     <Dialog
       open={open}
+      fullWidth={true}
+      maxWidth={'md'}
       PaperProps={{
         style: {
-          maxWidth: '100%',
+          //maxWidth: '100%',
         },
       }}
     >
