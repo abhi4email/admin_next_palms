@@ -66,3 +66,6 @@ yarn-error.log
 # Yarn Integrity file
 .yarn-integrity
 .idea
+
+.env.development
+.env.production
