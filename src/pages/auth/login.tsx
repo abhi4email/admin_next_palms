@@ -32,9 +32,10 @@ export default function Login() {
       password: data.get('password'),
     }).then((login_res) => {
       //console.log("user Login Information",resulte);
-      console.log('--- error Recored ', login_res);
-      if (login_res['error'] != null) {
-        toast('Unable to login !!');
+      //console.log('--- error Recored ', login_res);
+      let resp = login_res ? login_res['error'] : null;
+      if (resp) {
+        toast.error('Unable to login !!');
       } else {
         router.push('/dashboard');
       }
