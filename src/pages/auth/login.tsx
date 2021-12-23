@@ -30,7 +30,6 @@ export default function Login() {
       redirect: false,
       username: data.get('username'),
       password: data.get('password'),
-      //callbackUrl: 'http://localhost:3000/dashboard',
     }).then((login_res) => {
       //console.log("user Login Information",resulte);
       console.log('--- error Recored ', login_res);
