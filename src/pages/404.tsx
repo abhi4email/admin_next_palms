@@ -1,41 +1,26 @@
 import React from 'react';
-import { Card, CardBody } from '@paljs/ui/Card';
-import { ButtonLink } from '@paljs/ui/Button';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
-import styled from 'styled-components';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
 
 import Layout from 'Layouts';
 
-const ErrorStyle = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 2rem;
-  small {
-    margin-bottom: 3rem;
-  }
-  h1 {
-    margin-bottom: 0.5rem;
-  }
-  a {
-    max-width: 20rem;
-  }
-`;
 export default function Error(): JSX.Element {
   const router = useRouter();
   return (
     <Layout title="404 Page Not Found">
       <Card>
-        <CardBody>
-          <ErrorStyle>
-            <h1>404 Page Not Found</h1>
-            <small>The page you were looking for doesn&apos;t exist</small>
-            <ButtonLink fullWidth appearance="hero" onClick={() => router.push('/')} shape="Rectangle">
-              Take me home
-            </ButtonLink>
-          </ErrorStyle>
-        </CardBody>
+        <CardContent>
+          <h1>404 Page Not Found</h1>
+          <small>The page you were looking for doesn&apos;t exist</small>
+          <CardActions>
+            <Link href="/dashboard">
+              <a>Take me home</a>
+            </Link>
+          </CardActions>
+        </CardContent>
       </Card>
     </Layout>
   );
