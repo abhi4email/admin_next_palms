@@ -28,6 +28,8 @@ const headCells: GridColDef[] = [
   { field: 'first_name', headerName: 'First Name', flex: 1 },
   { field: 'last_name', headerName: 'Last Name', flex: 1 },
   { field: 'phone', headerName: 'Phone', flex: 1 },
+  { field: 'route', headerName: 'Route', flex: 1 },
+  { field: 'ship_city', headerName: 'Ship City', flex: 1 },
 ];
 
 export default function Customer(): JSX.Element {
