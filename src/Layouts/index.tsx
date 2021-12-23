@@ -14,6 +14,8 @@ import Link from 'next/link';
 import menuItems from './menuItem';
 import SEO, { SEOProps } from 'components/SEO';
 import Typography from '@mui/material/Typography';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const getDefaultTheme = (): DefaultTheme['name'] => {
   if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
@@ -126,6 +128,7 @@ const LayoutPage: React.FC<SEOProps> = ({ children, ...rest }) => {
               </LayoutContent>
             </LayoutContainer>
           </Layout>
+          <ToastContainer />
         </Fragment>
       </ThemeProvider>
     </Fragment>

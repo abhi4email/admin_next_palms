@@ -12,7 +12,12 @@ import Layout from 'Layouts';
 
 import { getCsrfToken, signIn } from 'next-auth/react';
 
+import { toast } from 'react-toastify';
+import { useRouter } from 'next/router';
+
 export default function Login() {
+  const router = useRouter();
+
   const onCheckbox = () => {
     // v will be true or false
   };
@@ -25,10 +30,15 @@ export default function Login() {
       redirect: false,
       username: data.get('username'),
       password: data.get('password'),
-      callbackUrl: 'http://localhost:3000/dashboard',
+      //callbackUrl: 'http://localhost:3000/dashboard',
     }).then((login_res) => {
       //console.log("user Login Information",resulte);
       console.log('--- error Recored ', login_res);
+      if (login_res['error'] != null) {
+        toast('Unable to login !!');
+      } else {
+        router.push('/dashboard');
+      }
     });
 
     return false;
