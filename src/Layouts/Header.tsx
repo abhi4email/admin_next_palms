@@ -82,25 +82,25 @@ const Header: React.FC<HeaderProps> = (props) => {
         </Label>
       ),
     },
-    {
-      value: 'cosmic',
-      label: (
-        <Label>
-          <EvaIcon name="droplet" options={{ fill: '#5a37b8' }} />
-          Cosmic
-        </Label>
-      ),
-    },
-    {
-      value: 'corporate',
-      label: (
-        <Label>
-          <EvaIcon name="droplet" options={{ fill: '#3366ff' }} />
-          Corporate
-        </Label>
-      ),
-      selected: true,
-    },
+    // {
+    //   value: 'cosmic',
+    //   label: (
+    //     <Label>
+    //       <EvaIcon name="droplet" options={{ fill: '#5a37b8' }} />
+    //       Cosmic
+    //     </Label>
+    //   ),
+    // },
+    // {
+    //   value: 'corporate',
+    //   label: (
+    //     <Label>
+    //       <EvaIcon name="droplet" options={{ fill: '#3366ff' }} />
+    //       Corporate
+    //     </Label>
+    //   ),
+    //   selected: true,
+    // },
   ];
   return (
     <LayoutHeader fixed>

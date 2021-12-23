@@ -13,6 +13,7 @@ import { Menu, MenuRefObject } from '@paljs/ui/Menu';
 import Link from 'next/link';
 import menuItems from './menuItem';
 import SEO, { SEOProps } from 'components/SEO';
+import Typography from '@mui/material/Typography';
 
 const getDefaultTheme = (): DefaultTheme['name'] => {
   if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
@@ -112,7 +113,16 @@ const LayoutPage: React.FC<SEOProps> = ({ children, ...rest }) => {
                 <LayoutColumns>
                   <LayoutColumn className="main-content">{children}</LayoutColumn>
                 </LayoutColumns>
-                {!authLayout && <LayoutFooter>© 2021-2022 Palms</LayoutFooter>}
+                {!authLayout && (
+                  <LayoutFooter>
+                    <Typography variant="body2" color="textSecondary" align="center">
+                      {'Copyright © '}
+                      <Link href="https://www.shoptropicals.com/">SHOPTROPICALS, ALL RIGHTS RESERVED</Link>{' '}
+                      {new Date().getFullYear()}
+                      {'.'}
+                    </Typography>
+                  </LayoutFooter>
+                )}
               </LayoutContent>
             </LayoutContainer>
           </Layout>

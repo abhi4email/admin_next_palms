@@ -18,8 +18,8 @@ const SEO: React.FC<SEOProps> = ({ description, keywords, title }) => (
     <meta name="twitter:creator" content="@abhi4email" />
     <meta name="twitter:image" content="" />
     <meta property="og:image" content="" />
-    <link rel="icon" type="image/png" href="/icons/icon-72x72.png" />
-    <link rel="apple-touch-icon" type="image/png" href="/icons/icon-72x72.png" />
+    <link rel="icon" type="image/png" href="/icons/favicon.ico" />
+    {/* <link rel="apple-touch-icon" type="image/png" href="/icons/icon-72x72.png" /> */}
   </Head>
 );
 

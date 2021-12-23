@@ -1,11 +1,11 @@
-//import Button from '@mui/material/Button';
-import { Button } from '@paljs/ui/Button';
-import { InputGroup } from '@paljs/ui/Input';
-import { Checkbox } from '@paljs/ui/Checkbox';
+import Button from '@mui/material/Button';
 import React from 'react';
 import Link from 'next/link';
 
 import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Checkbox from '@mui/material/Checkbox';
 
 import Auth, { Group } from 'components/Auth';
 import Layout from 'Layouts';
@@ -36,26 +36,17 @@ export default function Login() {
 
   return (
     <Layout title="Login">
-      <Auth title="Login" subTitle="Hello! Login with your email">
+      <Auth title="Login" subTitle="Hello! Login with your user name or email">
         <Box component="form" noValidate onSubmit={handleSubmit}>
-          <InputGroup fullWidth>
-            <input type="text" placeholder="User name" id="username" name="username" />
-          </InputGroup>
-          <InputGroup fullWidth>
-            <input type="password" placeholder="Password" name="password" id="password" />
-          </InputGroup>
+          <TextField id="username" name="username" fullWidth label="User Name" variant="outlined" />
+          <TextField name="password" id="password" type="password" fullWidth label="Password" variant="outlined" />
           <Group>
-            <Checkbox checked onChange={onCheckbox}>
-              Remember me
-            </Checkbox>
+            <FormControlLabel control={<Checkbox defaultChecked />} label="Remember me" />
             <Link href="/auth/request-password">
               <a>Forgot Password?</a>
             </Link>
           </Group>
-          {/* <Button variant="contained" fullWidth>
-            Login
-          </Button> */}
-          <Button status="Success" type="submit" shape="SemiRound" fullWidth>
+          <Button type="submit" variant="contained" fullWidth>
             Login
           </Button>
         </Box>
@@ -64,11 +55,11 @@ export default function Login() {
   );
 }
 
-// // This is the recommended way for Next.js 9.3 or newer
-// export async function getServerSideProps(context: any) {
-//   return {
-//     props: {
-//       csrfToken: await getCsrfToken(context)
-//     }
-//   }
-// }
+// This is the recommended way for Next.js 9.3 or newer
+export async function getServerSideProps(context: any) {
+  return {
+    props: {
+      csrfToken: await getCsrfToken(context),
+    },
+  };
+}
