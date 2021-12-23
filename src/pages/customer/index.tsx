@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Button from '@mui/material/Button';
+import EditIcon from '@mui/icons-material/Edit';
 import { useRouter } from 'next/router';
 import { GridColDef, GridCellValue, GridApi } from '@mui/x-data-grid-pro';
 import { DataGrid } from '../../components/DataGrid';
@@ -19,7 +20,7 @@ const headCells: GridColDef[] = [
         event.stopPropagation();
         console.log('Select Row Data', params.id);
       };
-      return <Button onClick={onEdit}>Edit</Button>;
+      return <Button startIcon={<EditIcon />} onClick={onEdit}></Button>;
     },
   },
   { field: 'customer_name', headerName: 'Customer Name', flex: 1 },
