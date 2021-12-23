@@ -15,7 +15,7 @@ const SEO: React.FC<SEOProps> = ({ description, keywords, title }) => (
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:site" content="" />
-    <meta name="twitter:creator" content="@AhmedElywh" />
+    <meta name="twitter:creator" content="@abhi4email" />
     <meta name="twitter:image" content="" />
     <meta property="og:image" content="" />
     <link rel="icon" type="image/png" href="/icons/icon-72x72.png" />

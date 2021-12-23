@@ -26,7 +26,7 @@ export default function ChatPage() {
       reply: true,
       type: files.length ? 'file' : 'text',
       files,
-      sender: 'Ahmed Elywa',
+      sender: 'Abhi',
       avatar: 'https://i.gifer.com/no.gif',
     };
     setMessages([...messages, newMessage]);

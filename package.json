@@ -1,9 +1,9 @@
 {
-  "name": "nextjs-admin-template",
+  "name": "admin-next-palms",
   "private": true,
-  "description": "Admin dashboard template based on nextjs with @paljs/ui component package",
+  "description": "Admin dashboard",
   "version": "0.1.0",
-  "author": "Ahmed Elywa",
+  "author": "abhi4email@gmail.com",
   "dependencies": {
     "@ckeditor/ckeditor5-build-classic": "29.2.0",
     "@ckeditor/ckeditor5-react": "3.0.2",
@@ -39,10 +39,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/paljs/nextjs-admin-template"
+    "url": "https://github.com/abhi4email/admin_next_palms"
   },
   "bugs": {
-    "url": "https://github.com/paljs/nextjs-admin-template/issues"
+    "url": "https://github.com/abhi4email/admin_next_palms/issues"
   },
   "devDependencies": {
     "@types/node": "16.7.10",
