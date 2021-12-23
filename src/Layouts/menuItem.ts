@@ -13,12 +13,7 @@ const items: MenuItemType[] = [
   {
     title: 'Customers',
     icon: { name: 'people-outline' },
-    children: [
-      {
-        title: 'All',
-        link: { href: '/customer/all' },
-      },
-    ],
+    link: { href: '/customer' },
   },
   {
     title: 'Miscellaneous',
